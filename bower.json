@@ -1,0 +1,13 @@
+{
+  "name": "ParkingApp",
+  "version": "0.0.0",
+  "main": "./app.js",
+  "ignore": [],
+  "dependencies": {
+    "firebase": "^3.3.1",
+    "angular": "1.5.8",
+    "bootstrap": "^3.3.7",
+    "angularfire": "^2.0.2",
+    "angular-route": "^1.5.8"
+  }
+}
