@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">[Administrador] Parking Control - CEUTEC</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6" ng-repeat="floor in floors | orderBy: '+id'">
+        <div ng-if="floor.free==0" class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-times fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div><input class="input-lg" style="color:black;" type="number" ng-model="floor.free" min="0" max="99" ng-change="update(floor)"/></div>
+                        <div><h3>Estacionamiento Disponible</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <span><h1 class="pull-left">{{floor.$id}}</h1></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div ng-if="floor.free>0" class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-check fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div><input class="input-lg" style="color:black;" type="number" ng-model="floor.free" min="0" max="99" ng-change="update(floor)"/></div>
+                        <div><h3>Estacionamiento Disponible</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <span><h1 class="pull-left">{{floor.$id}}</h1></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
