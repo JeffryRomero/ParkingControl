@@ -5,7 +5,7 @@
 </div>
 <div class="row">
     <div class="col-sm-6" ng-repeat="floor in floors | orderBy: '+id'">
-        <div ng-if="floor.free==0" class="panel panel-red">
+        <div ng-if="floor.free==0 || floor.free==null" class="panel panel-red">
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">

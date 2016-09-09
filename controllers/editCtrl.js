@@ -7,13 +7,16 @@ pcApp.controller('EditController', function ($scope,$firebaseArray,FBURL) {
     console.log($scope.floors);
     
     $scope.update= function (floor) {
-        console.log(floor);
-        data={};
-        data[floor.$id]={
-            free:floor.free,
-            id:floor.id
-        };
-        console.log(data);
-        test.update(data);
+        console.log(floor.free)
+        if(floor.free==null ){}else{
+            console.log(floor);
+            data={};
+            data[floor.$id]={
+                free:floor.free,
+                id:floor.id
+            };
+            console.log(data);
+            test.update(data);
+        }
     }
 });
